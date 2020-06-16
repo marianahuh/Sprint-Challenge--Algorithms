@@ -115,17 +115,19 @@ class SortingRobot:
                 self.move_left()
                 self.swap_item()
                 self.move_right()
-                # go back to restart loop
+                # go back to restart
                 self.set_light_on()
             # otherwise if smaller
             else:
-                # move to the left
+                # move item to the left
                 self.move_left()
                 self.swap_item()
                 self.move_right()
+            # if it reaches the end, break out of loop
             if not self.can_move_right():
                 if not self.light_is_on():
                     break
+                # otherwise keep going left
                 else:
                     while self.can_move_left():
                         self.move_left()

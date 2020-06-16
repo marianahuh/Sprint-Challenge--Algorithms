@@ -9,7 +9,7 @@ def count_th(word):
     # base case -> check if empty
     if word == '':
         return 0
-    # match/find the two consecutive characters with 'th
+    # match/find the two consecutive characters with 'th'
     elif word[:2] == 'th':
         # if characters match, then add 1 to recursive call
         return 1 + count_th(word[2:])
